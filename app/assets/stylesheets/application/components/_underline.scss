@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #UNDERLINE
+\*------------------------------------*/
+
+
+.underline {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        height: 10px;
+        content: "";
+        margin: 0 auto;
+        width: 100%;
+        background-color: rgba(22, 156, 227, 0.15);
+        //background-color: #70a1ff;
+        //background-image: linear-gradient(to right, #70a1ff 0%, #5352ed 100%);
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        transform: rotate(-1deg);
+    }
+}

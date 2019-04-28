@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    #HERO
+\*------------------------------------*/
+
+.hero {
+    margin: 0 auto;
+    margin-top: 50px;
+    color: $black;
+    text-align: center;
+
+    @include respond-to('medium') {
+        width: 80%;
+    }
+}
+
+.hero--home {
+    padding-bottom: $spacing-unit * 7;
+}
+
+.hero--brand {}
+.hero--products {}
+.hero--collection {}
+
+    .hero__title {
+        font-size: 38px;
+        font-weight: bold;
+        line-height: quadruple($spacing-unit);
+        text-transform: capitalize;
+
+        @include respond-to('medium') {
+            font-size: 58px;
+            line-height: 58px;
+        }
+    }
+
+    .hero__subtitle {
+        margin: 0 auto;
+        margin-top: double($spacing-unit);
+        margin-bottom: $spacing-unit * 5;
+        max-width: 580px;
+        font-size: 17px;
+        line-height: triple($spacing-unit);
+
+        @include respond-to('medium') {
+            font-size: 20px;
+            line-height: $spacing-unit * 3.5;
+        }
+
+        .hero--home & {
+            margin-bottom: double($spacing-unit);
+
+        }
+
+        .hero--collection & {
+            max-width: 700px;
+        }
+
+        .hero--brand & {
+            margin-bottom: $spacing-unit;
+        }
+
+        .hero--products & {
+            margin-bottom: triple($spacing-unit);
+        }
+    }
+
+    .hero__subtitle--with-action {
+        margin-bottom: 30px;
+    }
+
+    .hero__action {
+        margin-bottom: double($spacing-unit);
+        font-size: 13px;
+        font-style: italic;
+
+        @include respond-to('medium') {
+            font-size: 17px;
+        }
+    }
+
+    .hero__buttons {
+        margin-bottom: double($spacing-unit);
+    }
+
+    .hero__icon {
+        font-size: 40px;
+        vertical-align: middle;
+    }
+
+    .hero__showcase {
+        margin-top: quadruple($spacing-unit);
+    }
+
+        .hero__showcase-logo {
+            max-width: 20px;
+            vertical-align: middle;
+        }
+
+        .hero__showcase-logo--queal {
+            max-width: 25px;
+        }
+
+        .hero__showcase-logo--powdermatter {
+            max-width: 30px;
+        }

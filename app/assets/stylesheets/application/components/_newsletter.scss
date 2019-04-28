@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    #NEWSLETTER
+\*------------------------------------*/
+
+
+.newsletter {
+    margin-top: double($spacing-unit);
+    text-align: center;
+
+    .tingle-modal-box & {
+        margin-top: 0;
+    }
+}
+
+    .newsletter__description {
+        display: block;
+        margin-top: $spacing-unit;
+        margin-bottom: halve($spacing-unit);
+        color: $purple;
+        line-height: 1.1;
+    }
+
+    .newsletter__highlight {
+        font-size: 13px;
+    }
+
+    .newsletter__gif {
+        margin: double($spacing-unit) 0;
+        border-radius: $border-radius;
+    }
+
+    .newsletter__input {
+        display: block;
+        margin: $spacing-unit auto;
+        padding: double($spacing-unit);
+        width: 100%;
+        max-width: 400px;
+        font-size: 17px;
+        font-weight: 600;
+        border: 2px solid $gray--medium;
+        border-radius: $border-radius;
+    }

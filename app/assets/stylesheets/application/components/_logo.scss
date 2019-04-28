@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #LOGO
+\*------------------------------------*/
+
+.logo {
+    margin-bottom: $spacing-unit * 5;
+    max-width: 460px;
+
+    .home__logo & {
+        margin-bottom: 0;
+    }
+}

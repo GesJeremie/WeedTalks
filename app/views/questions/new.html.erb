@@ -1,0 +1,8 @@
+<div class="grid grid--center">
+  <div class="grid__cell grid__cell--70-at-medium">
+    <%= form_tag questions_path, method: 'post', class: 'form form--new-question' do %>
+      <%= text_area_tag :title, nil, class: 'text-box', placeholder: "Example: What's the most stupid thing you ever did in your life?" %>
+      <%= submit_tag 'Add my question to WeedTalks', class: 'button button--secondary button--capitalize button--large' %>
+    <% end %>
+  </div>
+</div>

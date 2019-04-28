@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    #STATS
+\*------------------------------------*/
+
+.stats {
+    margin-top: $spacing-unit * 5;
+}
+
+    .stats__item {
+        display: inline-block;
+        margin: 0 halve($spacing-unit);
+        margin-bottom: double($spacing-unit);
+        padding: double($spacing-unit) 0;
+        width: 210px;
+        background: $white;
+        border-radius: 10px;
+        box-shadow: $box-shadow;
+
+        @include respond-to('medium') {
+            margin-bottom: 0;
+        }
+    }
+
+        .stats__label {
+            display: block;
+            margin-bottom: $spacing-unit;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .stats__value {
+            display: block;
+            font-size: 40px;
+            font-family: $font-numeric;
+        }

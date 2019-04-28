@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #TEXT-BOX
+\*------------------------------------*/
+
+.text-box {
+    display: block;
+    margin: 0 auto;
+    padding: double($spacing-unit) triple($spacing-unit);
+    width: 100%;
+    max-width: 600px;
+    font-size: 16px;
+    border: 2px solid $blue;
+    border-radius: $border-radius;
+}

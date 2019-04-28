@@ -1,0 +1,201 @@
+/*------------------------------------*\
+    #BUTTON
+\*------------------------------------*/
+
+$button-filters-hover-bg-color:                 darken($green, 5%) !default;
+$button-show-results-filters-hover-bg-color:    darken($green, 5%) !default;
+$button-fixed-width:                            150px !default;
+
+
+.button {
+    display: inline-block;
+    margin: 0;
+    margin-top: double($spacing-unit);
+    padding: 15px 25px;
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    background-color: $black;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    vertical-align: middle;
+
+    .guru__footer & {
+        width: 100%;
+
+        @include respond-to('medium') {
+            width: auto;
+        }
+    }
+
+    .sort-form &,
+    .search-form & {
+        margin-top: $spacing-unit;
+        width: 100%;
+
+        @include respond-to('medium') {
+            margin-top: 0;
+            width: auto;
+        }
+    }
+
+    .result-filters__footer & {
+        padding-top: $spacing-unit * 2.5;
+        padding-bottom: $spacing-unit * 2.5;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+
+.button + .button {
+    margin-left: 0;
+
+    @include respond-to('medium') {
+        margin-left: $spacing-unit;
+    }
+}
+
+.button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.button--secondary {
+    background-color: #11A0F3;
+}
+
+.button--muted {
+    color: $gray;
+    background-color: $gray--medium-light;
+}
+
+.button--small {
+    padding: $spacing-unit;
+}
+
+.button--large {
+    padding: double($spacing-unit) quadruple($spacing-unit);
+    font-size: 16px;
+}
+
+.button--full {
+    width: 100%;
+}
+
+.button--capitalize {
+    text-transform: capitalize;
+}
+
+.button--uppercase {
+    text-transform: uppercase;
+}
+
+.button--no-margin {
+    margin: 0;
+}
+
+.button--no-box-shadow {
+    box-shadow: none;
+}
+
+.button--fixed-width {
+    width: $button-fixed-width;
+    max-width: $button-fixed-width;
+}
+
+.button--with-arrow {
+    &:after {
+        display: inline-block;
+        padding-left: $spacing-unit;
+        font-size: 16px;
+        content: '\2192';
+        vertical-align: middle;
+    }
+}
+
+.button--with-icon {
+    vertical-align: middle;
+}
+
+.button--filters {
+    margin: 0;
+    padding: double($spacing-unit);
+    width: 100%;
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: $green;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+    @include respond-to('medium') {
+        width: auto;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $button-filters-hover-bg-color;
+    }
+}
+
+.button--call-to-action {
+    margin-top: 0;
+    width: 120px;
+    font-size: 12px;
+
+    @include respond-to('medium') {
+        font-size: 14px;
+    }
+}
+
+
+.button--sponsor {
+    margin-top: 0;
+    padding: 8px 13px;
+    width: 100%;
+    max-width: 200px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+
+    @include respond-to('xx-wide') {
+        max-width: 100%;
+    }
+
+    .sponsor--queal & {
+        color: $white;
+        background-color: $sponsor-queal;
+    }
+
+    .sponsor--powdermatter & {
+        color: $white;
+        background-color: $sponsor-powdermatter;
+    }
+
+    .sponsor--parachute & {
+        color: $white;
+        background-color: $sponsor-parachute;
+    }
+}
+
+.button--feedback-yes,
+.button--feedback-no {
+    margin-top: 0;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+.button--feedback-yes {
+    background-color: $green--light;
+}
+
+.button--feedback-no {
+    background-color: $red--light;
+}

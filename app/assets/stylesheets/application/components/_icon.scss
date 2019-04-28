@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #ICON
+\*------------------------------------*/
+
+.icon {
+    width: 24px;
+    height: 24px;
+
+    .result-filters__choice &,
+    .guru__choice & {
+        vertical-align: middle;
+    }
+
+    .newsletter & {
+        width: 20px;
+        height: 20px;
+        fill: $white;
+        vertical-align: middle;
+    }
+
+    .search-form & {
+        fill: $white;
+    }
+}

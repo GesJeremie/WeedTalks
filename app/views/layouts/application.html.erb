@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title><%= page_title %></title>
+
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= content_for?(:head) ? yield(:head) : render('layouts/application/head') %>
+  </head>
+
+  <body>
+    <center>
+      <div class="layout">
+
+        <% unless current_page?(root_path) %>
+          <%= link_to root_path do %>
+            <%= inline_svg 'logo.svg', class: 'logo' %>
+          <% end %>
+        <% end %>
+
+        <% if flash.present? %>
+          <div class="grid grid--center">
+            <div class="grid__cell grid__cell--50-at-medium">
+              <% flash.each do |key, value| %>
+                <%= content_tag :div, value.html_safe, class: "alert alert--#{key}" %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+
+        <%= yield %>
+
+        <div class="footer">
+          <div class="stats">
+            <div class="stats__item">
+              <span class="stats__label">Games Started</span>
+              <span class="stats__value"><%= count_games %></span>
+            </div>
+
+            <div class="stats__item">
+              <span class="stats__label">Questions Answered</span>
+              <span class="stats__value"><%= count_questions_answered %></span>
+            </div>
+
+            <div class="stats__item">
+              <span class="stats__label">Total Questions</span>
+              <span class="stats__value"><%= count_questions %></span>
+            </div>
+          </div>
+
+          <div class="footer__links">
+            <%= link_to 'Add my question to WeedTalks', new_question_path, class: 'button button--small button--capitalize' %>
+          </div>
+
+          <div class="footer__contact">
+            For any suggestions, questions, support, feel free to reach us at <%= link_to 'contact.weedtalks@gmail.com', 'mailto:contact.weedtalks@gmail.com', class: 'footer__contact-link' %>
+          </div>
+        </div>
+      </div>
+    </center>
+  </body>
+
+  <% if Rails.env.production? %>
+    <%= render 'layouts/application/google_analytics' %>
+  <% end %>
+
+  <%= javascript_include_tag 'application' %>
+</html>

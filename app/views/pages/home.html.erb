@@ -1,0 +1,24 @@
+<div class="home">
+
+  <div class="home__about">
+    <div class="heading heading--1">
+      <span class="underline">Stoned and stuck on conversation?</span>
+    </div>
+
+    <div class="home__logo">
+      <%= inline_svg 'logo.svg', class: 'logo' %>
+    </div>
+
+    <div class="home__description">
+      <p>Stimulating stoner conversation starters.</p>
+    </div>
+  </div>
+
+  <div class="home__start">
+    <%= link_to 'Let the Talks begin!', new_game_path, class: 'button button--secondary button--large button--capitalize button--with-arrow' %>
+  </div>
+
+  <div class="home__rules">
+    <strong class="underline">The rule is simple</strong>: When it's your turn, honestly answer the question.
+  </div>
+</div>

@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #HOME
+\*------------------------------------*/
+
+.home {}
+
+    .home__about {
+        @include respond-to('medium') {
+            margin-top: $spacing-unit * 6;
+        }
+    }
+
+    .home__description {
+        margin-top: $spacing-unit * 4;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 30px;
+    }
+
+    .home__rules {
+        margin-top: triple($spacing-unit);
+    }

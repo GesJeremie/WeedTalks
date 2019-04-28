@@ -1,0 +1,168 @@
+/*------------------------------------*\
+    #PRODUCT-ITEM
+\*------------------------------------*/
+
+.product-item {
+    display: block;
+    position: relative;
+    margin: double($spacing-unit) 0;
+    padding: ($spacing-unit * 1.5) halve($spacing-unit);
+    height: auto;
+    color: $black;
+    text-decoration: none;
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+
+    @include respond-to('medium') {
+        padding: ($spacing-unit * 1.5) $spacing-unit;
+    }
+
+    .product-results--refreshing & {
+        opacity: $opacity--refreshing;
+    }
+}
+
+
+    .product-item__details {
+        display: inline-block;
+        width: 100%;
+    }
+
+
+        .product-item__thumbnail {
+            display: inline-block;
+            margin-left: $spacing-unit;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            background-size: cover;
+            background-image: none;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            vertical-align: middle;
+        }
+
+
+        .product-item__heading {
+            display: inline-block;
+            margin-left: $spacing-unit;
+            vertical-align: middle;
+        }
+
+            .product-item__name {
+                margin-bottom: halve($spacing-unit);
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            .product-item__brand {
+
+            }
+
+                .product-item__flag {
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    .flag-icon {
+                        height: 15px;
+                        vertical-align: middle;
+                    }
+                }
+
+                .product-item__brand-name {
+                    display: inline-block;
+                    margin-top: ($spacing-unit / 3);
+                    vertical-align: middle;
+                }
+
+            .product-item__type {
+                margin: $spacing-unit 0;
+
+                span {
+                    margin-top: $spacing-unit;
+                    padding: 2px halve($spacing-unit);
+                    color: $white;
+                    font-size: 12px;
+                    border-radius: $border-radius;
+                }
+            }
+
+            .product-item__type--ready-to-eat {
+                span {
+                    background: $yellow;
+                }
+            }
+
+            .product-item__type--ready-to-drink {
+                span {
+                    background: $red;
+                }
+            }
+
+            .product-item__type--powder {
+                span {
+                    background: $green;
+                }
+            }
+
+
+    .product-item__list {
+        margin-top: triple($spacing-unit);
+
+        @include respond-to('medium') {
+            margin-top: double($spacing-unit);
+        }
+    }
+
+        .product-item__list-item {
+            text-align: center;
+        }
+
+            .product-item__list-label {
+                display: block;
+                color: $gray--light;
+            }
+
+            .product-item__list-label--note {
+                font-size: 12px;
+            }
+
+            .product-item__list-value {
+                display: block;
+                margin-top: 3px;
+            }
+
+
+    .product-item__cost {
+        margin-top: triple($spacing-unit);
+        margin-right: $spacing-unit;
+        color: $blue;
+        text-align: right;
+
+        @include respond-to('medium') {
+            margin-top: double($spacing-unit);
+        }
+    }
+
+        .product-item__cost-value {
+            display: block;
+            font-size: 22px;
+            font-family: $font-numeric;
+            font-weight: 300;
+
+            @include respond-to('medium') {
+                font-size: 29px;
+            }
+        }
+
+        .product-item__cost-description {
+            display: block;
+            color: $blue;
+            font-size: 12px;
+            font-weight: 300;
+
+            @include respond-to('medium') {
+                text-align: right;
+            }
+        }

@@ -1,0 +1,26 @@
+<%
+   %w(
+      lodash
+      stimulus
+      classtrophobic
+      jquery
+      jquery_ujs
+      jquery.lazy
+      sweetalert
+      autosize
+      tingle
+      js-routes
+      js_cookie
+
+      boot
+      application/config
+
+      application/templates/modal_error
+      application/templates/modal_loading
+
+      application/services/breakpoints
+      application/services/modal
+    ).each do |asset|
+      require_asset asset
+   end
+%>

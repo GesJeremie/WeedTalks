@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+
+.footer {
+    margin: ($spacing-unit * 10) 0;
+}
+
+    .footer__contact {
+        margin-top: triple($spacing-unit);
+        line-height: double($spacing-unit);
+    }
+
+
+        .footer__contact-link {
+            color: $blue;
+            text-decoration-style: dotted;
+        }

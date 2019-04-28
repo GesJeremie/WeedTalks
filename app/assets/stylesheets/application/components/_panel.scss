@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    #PANEL
+\*------------------------------------*/
+
+.panel {
+    display: block;
+    margin: $spacing-unit * 5;
+    padding: ($spacing-unit * 5) ($spacing-unit * 3);
+    width: auto;
+    font-size: 22px;
+    background: $white;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+}
+
+.panel--question {
+    margin: 0;
+    padding: double($spacing-unit) ($spacing-unit * 4);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: center;
+
+    @include respond-to('medium') {
+        margin: $spacing-unit * 5;
+        padding: ($spacing-unit * 5) ($spacing-unit * 3);
+        font-size: 22px;
+    }
+
+    strong {
+        display: block;
+        margin-bottom: $spacing-unit;
+
+        @include respond-to('medium') {
+            display: inline-block;
+            margin-bottom: 0;
+            font-size: 22px;
+        }
+    }
+}
+
+.panel--feedback {
+    display: inline-block;
+    padding: ($spacing-unit * 2) ($spacing-unit * 3);
+    font-size: 16px;
+    border-radius: 5px;
+
+    span {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+}
