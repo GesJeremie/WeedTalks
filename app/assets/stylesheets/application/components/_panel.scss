@@ -13,6 +13,10 @@
     box-shadow: $box-shadow;
 }
 
+    .panel__content {
+        min-height: 110px;
+    }
+
 .panel--question {
     margin: 0;
     padding: double($spacing-unit) ($spacing-unit * 4);
@@ -32,8 +36,6 @@
         margin-bottom: $spacing-unit;
 
         @include respond-to('medium') {
-            display: inline-block;
-            margin-bottom: 0;
             font-size: 22px;
         }
     }

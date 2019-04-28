@@ -4,12 +4,16 @@
       <div class="game-question__container">
         <% if @question.nil? %>
           <div class="panel panel--question">
-            <strong>Wow!!</strong> You answered all the questions of the game!
+            <div class="panel__content">
+              <strong>Wow!!</strong> You answered all the questions of the game!
+            </div>
           </div>
           <%= link_to 'Let\'s start another game', new_game_path, class: 'button button--large button--secondary button--with-arrow' %>
         <% else %>
           <div class="panel panel--question">
-            <strong>Question: </strong> <%= @question.title %>
+            <div class="panel__content">
+             <strong>Question: </strong> <%= @question.title %>
+            </div>
           </div>
           <%= link_to 'Show another question', game_path, class: 'button button--large button--secondary button--with-arrow' %>
         <% end %>
