@@ -21,8 +21,6 @@ namespace :db do
           Rake::Task['db:create'].invoke
           Rake::Task['db:migrate'].invoke
           Rake::Task['db:seed'].invoke
-          Rake::Task['import:brands'].invoke
-          Rake::Task['import:products'].invoke
         end
 
         def migrate

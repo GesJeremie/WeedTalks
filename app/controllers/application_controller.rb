@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  http_basic_authenticate_with name: ENV['admin_name'], password: ENV['admin_password'], if: :admin_controller?
+  http_basic_authenticate_with name: ENV['ADMIN_NAME'], password: ENV['ADMIN_PASSWORD'], if: :admin_controller?
 
   def current_game
     @current_game ||= begin
