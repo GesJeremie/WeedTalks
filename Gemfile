@@ -43,6 +43,9 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'js-routes'
 gem 'ejs'
 
+# Favicon
+gem 'rails_real_favicon'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'faker'
