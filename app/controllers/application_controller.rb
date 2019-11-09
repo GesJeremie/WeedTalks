@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  http_basic_authenticate_with name: ENV['ADMIN_NAME'], password: ENV['ADMIN_PASSWORD'], if: :admin_controller?
+  before_action :authenticate, if: :admin_controller?
 
   def current_game
     @current_game ||= begin
@@ -14,6 +14,13 @@ class ApplicationController < ActionController::Base
     end
   end
   helper_method :current_game
+
+  def authenticate
+    authenticate_or_request_with_http_basic('Administration') do |user, password|
+      basic_auth = Weedtalks.config.basic_auth
+      (user == basic_auth[:user]) && (password == basic_auth[:password])
+    end
+  end
 
   def view_model_options
     params.to_unsafe_h.merge(

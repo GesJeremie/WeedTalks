@@ -32,6 +32,7 @@ gem 'active_hash'
 
 # Dashboard
 gem 'activeadmin'
+gem 'formadmin'
 
 # Front-end
 gem 'inline_svg'
