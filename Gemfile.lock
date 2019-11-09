@@ -87,7 +87,7 @@ GEM
     execjs (2.7.0)
     faker (1.9.1)
       i18n (>= 0.7)
-    ffi (1.9.23)
+    ffi (1.11.1)
     flag-icons-rails (3.1.0)
       sass (~> 3.2)
     formadmin (0.2.1)
