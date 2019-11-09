@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include Mengpaneel::Controller
+
   protect_from_forgery with: :exception
   before_action :authenticate, if: :admin_controller?
 
@@ -9,6 +11,9 @@ class ApplicationController < ActionController::Base
       else
         Game.create.tap do |game|
           session[:game_id] = game.id
+          mixpanel.track('Game Created', {
+            'Game Id': game.id
+          })
         end
       end
     end
@@ -20,6 +25,15 @@ class ApplicationController < ActionController::Base
       basic_auth = Weedtalks.config.basic_auth
       (user == basic_auth[:user]) && (password == basic_auth[:password])
     end
+  end
+
+  #
+  # Mengpaneel::Strategy::ClientSide delegates "env" to
+  # the controller which does not exist in this rails
+  # version (deprecated for request.env)
+  #
+  def env
+    request.env
   end
 
   def view_model_options

@@ -10,6 +10,10 @@ class QuestionsController < BaseController
     question = Question.create(question_params)
 
     if question.save
+      mixpanel.track('Question Added', {
+        'Question Id': question.id,
+        'Question Title': question.title
+      })
       flash.now[:success] = "<strong>Thanks for that, eh!</strong> If we think your question should be in the game, we will add it!"
     else
       flash.now[:error] = question.errors.full_messages.to_sentence

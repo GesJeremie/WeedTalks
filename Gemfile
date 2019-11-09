@@ -44,6 +44,9 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'js-routes'
 gem 'ejs'
 
+# Analytics
+gem 'mengpaneel'
+
 # Favicon
 gem 'rails_real_favicon'
 
