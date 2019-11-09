@@ -4,39 +4,49 @@
 
 
 .newsletter {
-    margin-top: double($spacing-unit);
-    text-align: center;
+    display: block;
+    margin-top: $spacing-unit * 2;
+    margin-bottom: $spacing-unit * 2;
+    padding: $spacing-unit * 2;
+    width: auto;
+    max-width: 800px;
+    background: $white;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
 
-    .tingle-modal-box & {
-        margin-top: 0;
+    @include respond-to('wide') {
+        margin-bottom: 0;
     }
 }
 
     .newsletter__description {
-        display: block;
-        margin-top: $spacing-unit;
-        margin-bottom: halve($spacing-unit);
-        color: $purple;
-        line-height: 1.1;
+        display: inline-block;
+        margin-bottom: $spacing-unit;
+        padding-right: $spacing-unit;
+        font-size: 14px;
+        font-weight: bold;
+
+        @include respond-to('wide') {
+            margin-bottom: $spacing-unit;
+        }
     }
 
-    .newsletter__highlight {
-        font-size: 13px;
+    .newsletter__email {
+        display: inline-block;
+        width: 250px;
     }
 
-    .newsletter__gif {
-        margin: double($spacing-unit) 0;
-        border-radius: $border-radius;
-    }
+        .newsletter__input {
+            display: block;
+            padding: $spacing-unit;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 600;
+            border: 2px solid $gray--medium;
+            border-radius: $border-radius;
+        }
 
-    .newsletter__input {
-        display: block;
-        margin: $spacing-unit auto;
-        padding: double($spacing-unit);
-        width: 100%;
-        max-width: 400px;
-        font-size: 17px;
-        font-weight: 600;
-        border: 2px solid $gray--medium;
-        border-radius: $border-radius;
+    .newsletter__submit {
+        display: inline-block;
+        padding-left: $spacing-unit;
     }

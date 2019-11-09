@@ -12,5 +12,6 @@ Rails.application.routes.draw do
 
   resources :questions, only: [:index, :new, :create]
   resource :game
+  resource :newsletter, only: [:show, :create]
 end
 

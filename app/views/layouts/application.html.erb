@@ -36,6 +36,24 @@
         <%= yield %>
 
         <div class="footer">
+          <% unless enrolled_newsletter? %>
+            <div class="newsletter">
+              <%= form_tag newsletter_path, method: 'post' do %>
+                <div class="newsletter__description">
+                 Alert me when a new question is added
+                </div>
+
+                <div class="newsletter__email">
+                  <%= email_field_tag 'email', nil, placeholder: 'Email', class: 'newsletter__input', required: true, email: true %>
+                </div>
+
+                <div class="newsletter__submit">
+                  <%= button_tag 'Notify Me', type: 'submit', class: 'button' %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
           <div class="stats">
             <div class="stats__item">
               <span class="stats__label">Games Started</span>

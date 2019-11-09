@@ -20,6 +20,11 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_game
 
+  def enrolled_newsletter?
+    session[:enrolled_newsletter].present?
+  end
+  helper_method :enrolled_newsletter?
+
   def authenticate
     authenticate_or_request_with_http_basic('Administration') do |user, password|
       basic_auth = Weedtalks.config.basic_auth

@@ -49,6 +49,11 @@ $button-fixed-width:                            150px !default;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
     }
+
+    .newsletter__submit & {
+        margin-top: 0;
+        padding: 13px ($spacing-unit * 2.5);
+    }
 }
 
 .button + .button {
@@ -154,7 +159,6 @@ $button-fixed-width:                            150px !default;
         font-size: 14px;
     }
 }
-
 
 .button--sponsor {
     margin-top: 0;
